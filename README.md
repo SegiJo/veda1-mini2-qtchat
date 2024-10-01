@@ -1,0 +1,1 @@
+# veda1-mini3-qtchat
