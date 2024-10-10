@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddChatRoom</class>
+ <widget class="QWidget" name="AddChatRoom">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>400</width>
+    <height>300</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>400</width>
+    <height>300</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>새 채팅방 추가</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton {
+background-color:#535366;
+color:#ffffff;
+font-size: 20px;
+font:10pt &quot;Microsoft YaHei UI&quot;;
+border-radius:8px;
+font-weight:700;
+height:44px;
+width: 100%;
+}
+QPushButton:disabled {
+background-color: #787a7e;
+}
+QPushButton:hover {
+background-color: #383a3e;
+}
+QFrame{
+margin:2px;
+border: 1px solid #dcdee0;;
+border-radius: 24px;
+background-color:rgb(255, 255, 255);
+padding:10px;
+}
+QLineEdit{
+border: 1px solid rgb(41, 57, 85);
+border-radius: 3px;
+border-color:#dcdee0;
+height:36px;
+background: white;
+padding-left: 12px;
+padding-right: 12px;
+border-color:#e4e5eb;
+}
+QLineEdit:hover {
+border-color: #db9a45;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QFrame" name="frame">
+     <property name="styleSheet">
+      <string notr="true">Background: rgb(234, 230, 224);
+
+border-radius: 5px;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="endLineEdit">
+          <property name="styleSheet">
+           <string notr="true">background-color: #FFFFFF;
+
+color: rgb(28, 28, 28);
+
+border: 1.5px solid #535366;
+
+border-radius: 5px;</string>
+          </property>
+          <property name="placeholderText">
+           <string>도착지</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="startLineEdit">
+          <property name="styleSheet">
+           <string notr="true">background-color: #FFFFFF;
+
+color: rgb(28, 28, 28);
+
+border: 1.5px solid #535366;
+
+border-radius: 5px;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="placeholderText">
+           <string>출발지</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="chatnameLineEdit">
+          <property name="styleSheet">
+           <string notr="true">background-color: #FFFFFF;
+
+color: rgb(28, 28, 28);
+
+border: 1.5px solid #535366;
+
+border-radius: 5px;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="placeholderText">
+           <string>채팅방 이름</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <spacer name="horizontalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="addchatButton">
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+
+background-color: #535366;
+
+color: white;
+
+border-radius: 5px;
+
+}
+
+QPushButton:hover {
+
+background-color: #555;
+
+}
+
+QPushButton:pressed {
+
+background-color: #777;
+
+}</string>
+          </property>
+          <property name="text">
+           <string>생성</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="closeButton">
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+
+background-color: #535366;
+
+color: white;
+
+border-radius: 5px;
+
+}
+
+QPushButton:hover {
+
+background-color: #555;
+
+}
+
+QPushButton:pressed {
+
+background-color: #777;
+
+}</string>
+          </property>
+          <property name="text">
+           <string>닫기</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_5">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>chatnameLineEdit</tabstop>
+  <tabstop>startLineEdit</tabstop>
+  <tabstop>endLineEdit</tabstop>
+  <tabstop>addchatButton</tabstop>
+  <tabstop>closeButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
