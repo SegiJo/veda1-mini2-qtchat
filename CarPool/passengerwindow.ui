@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PassengerWindow</class>
+ <widget class="QMainWindow" name="PassengerWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>554</width>
+    <height>402</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>30</y>
+      <width>451</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">Background: rgb(234, 230, 224);
+border-radius: 5px;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>40</y>
+       <width>40</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="Logo.qrc">:/image/pin.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>130</y>
+       <width>40</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="Logo.qrc">:/image/pin.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>55</y>
+       <width>51</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(83, 83, 102);
+font-size: 15px;
+font-weight: bold;</string>
+     </property>
+     <property name="text">
+      <string>출발지</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>140</y>
+       <width>51</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(83, 83, 102);
+font-size: 15px;
+font-weight: bold;</string>
+     </property>
+     <property name="text">
+      <string>도착지</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="StartInput">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>80</y>
+       <width>311</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #FFFFFF;
+color: rgb(28, 28, 28);
+border: 1.5px solid #535366;
+border-radius: 5px; </string>
+     </property>
+     <property name="placeholderText">
+      <string>출발지를 입력하세요.</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ArriveInput">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>170</y>
+       <width>311</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #FFFFFF;
+color: rgb(28, 28, 28);
+border: 1.5px solid #535366;
+border-radius: 5px; </string>
+     </property>
+     <property name="placeholderText">
+      <string>출발지를 입력하세요.</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="ListButton">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>269</y>
+       <width>100</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton { 
+    background-color: #535366; 
+    color: white; 
+    border-radius: 5px; 
+    }
+ QPushButton:hover { 
+    background-color: #555; 
+    }
+  QPushButton:pressed { 
+    background-color: #777; 
+    }</string>
+     </property>
+     <property name="text">
+      <string>채팅방 목록보기</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="Logo.qrc"/>
+ </resources>
+ <connections/>
+</ui>
