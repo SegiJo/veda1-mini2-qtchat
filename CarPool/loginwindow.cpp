@@ -4,6 +4,7 @@
 #include "signupwindow.h"
 #include "sewindow.h"
 #include "chatlistwindow.h"
+#include "serverinfo.h"
 
 #include <QPainter>
 #include <QGraphicsDropShadowEffect>
@@ -11,6 +12,7 @@
 #include <QHostAddress>
 #include <QDialog>
 #include <QCryptographicHash>
+#include <QPropertyAnimation>
 
 LoginWindow::LoginWindow(QWidget *parent)
     : QMainWindow(parent),
@@ -28,6 +30,13 @@ LoginWindow::LoginWindow(QWidget *parent)
     shadowEffect->setColor(color);
     shadowEffect->setBlurRadius(20);
     ui->frame->setGraphicsEffect(shadowEffect);
+
+    QPropertyAnimation *fadeInAnimation = new QPropertyAnimation(this, "windowOpacity");
+    fadeInAnimation->setDuration(300);  // 애니메이션 지속 시간 (밀리초)
+    fadeInAnimation->setStartValue(0.0); // 시작 값 (완전히 사라짐)
+    fadeInAnimation->setEndValue(1.0);   // 끝 값 (완전히 보임)
+    fadeInAnimation->start(); // 애니메이션 시작
+
 
     // 소켓 초기화
     socket = new QTcpSocket(this);  // 소켓 객체를 초기화
@@ -57,41 +66,33 @@ void LoginWindow::onRegisterButtonClicked() {
 
 void LoginWindow::onLoginButtonClicked()
 {
+    if (socket->state() != QTcpSocket::ConnectedState) {
+        // 서버 주소와 포트 가져오기
+        QString serverAddress = ui->IpInput->text();
+        quint16 serverPort = ui->PortInput->text().toUShort();
 
-    QString serverAddress = ui->IpInput->text();  // IP 입력 필드에서 값 가져오기
-    quint16 serverPort = ui->PortInput->text().toUShort();  // 포트 입력 필드에서 값 가져오기
+        // 서버에 연결 시도
+        socket->connectToHost(QHostAddress(serverAddress), serverPort);
 
-    // 서버와 연결
-    socket->connectToHost(QHostAddress(serverAddress), serverPort);  // 서버 IP와 포트 사용
-
-    if (!socket->waitForConnected(5000)) {  // 5초 동안 연결 대기
-        QString errorMessage = socket->errorString();  // 정확한 오류 메시지 출력
-        QMessageBox::warning(this, "연결 실패", "서버와 연결할 수 없습니다: " + errorMessage);
-        qDebug() << "연결 실패 이유: " << errorMessage;
-        return; // 연결 실패 시 함수를 종료
+        if (!socket->waitForConnected(3000)) {
+            QMessageBox::critical(this, "연결 실패", "서버에 연결할 수 없습니다.");
+            return;
+        }
     }
 
-    connect(socket, &QTcpSocket::readyRead, this, &LoginWindow::receiveLoginResponse);
-    qDebug() << "서버에 성공적으로 연결되었습니다.";
+    QString username = ui->NameInput->text();
+    QString password = ui->PasswdInput->text();
 
-    QString username = ui->NameInput->text();  // 사용자 이름 입력
-    QString password = ui->PasswdInput->text(); // 비밀번호 입력
-
-    // 입력 필드가 비어있는지 확인
     if (username.isEmpty() || password.isEmpty()) {
         QMessageBox::warning(this, "입력 오류", "사용자 이름과 비밀번호를 입력해주세요.");
         return;
     }
 
-    // 비밀번호 해시화 (SHA-256)
-    QByteArray hashedPassword = QCryptographicHash::hash(password.toUtf8(), QCryptographicHash::Sha256).toHex();
-
     // 서버로 로그인 정보 전송
-    QString loginRequest = "USER_LOGIN:" + username + ":" + QString(hashedPassword) + "\n";
+    QString loginRequest = "USER_LOGIN:" + username + ":" + password + "\n";
     socket->write(loginRequest.toUtf8());
     socket->flush();
-
-    /*
+   /*
     ChatListWindow *userChatList = new ChatListWindow();
     userChatList->setAttribute(Qt::WA_DeleteOnClose); // Automatically delete when closed
     userChatList->show();  // Show the chat list window
@@ -100,16 +101,25 @@ void LoginWindow::onLoginButtonClicked()
 }
 
 void LoginWindow::receiveLoginResponse() {
-
     while (socket->canReadLine()) {
         QString response = socket->readLine().trimmed();
+        ChatListWindow *userChatList = new ChatListWindow();
 
         if (response == "LOGIN_SUCCESS") {
             QMessageBox::information(this, "로그인 성공", "로그인에 성공했습니다!");
 
-            // 로그인 성공 시 ChatListWindow 띄우기
-            ChatListWindow *chatlistwindow = new ChatListWindow(this);  // 부모를 지정하여 메모리 관리
-            chatlistwindow->show();  // ChatListWindow 표시
+            QString serverAddress = ui->IpInput->text();
+            quint16 serverPort = ui->PortInput->text().toUShort();
+            ServerInfo::getInstance().setServerInfo(serverAddress, serverPort);
+
+            userChatList->setAttribute(Qt::WA_DeleteOnClose); // Automatically delete when closed
+            userChatList->show();  // Show the chat list window
+            this->close();
+        }
+        else if (response == "ACCOUNT_CREATED") {
+            QMessageBox::information(this, "계정 생성", "새 계정이 생성되었습니다. 로그인에 성공했습니다!");
+
+            userChatList->show();  // Show the chat list window
             this->close();  // 로그인 창 닫기
         }
         else if (response == "LOGIN_FAILURE") {
@@ -117,6 +127,7 @@ void LoginWindow::receiveLoginResponse() {
         }
     }
 }
+
 
 void LoginWindow::onCloseButtonClicked()
 {

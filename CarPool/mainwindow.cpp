@@ -7,6 +7,7 @@
 #include <QMovie>
 #include <QLabel>
 #include <QTimer>
+#include <QPropertyAnimation>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent),

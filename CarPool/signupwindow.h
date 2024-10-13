@@ -22,6 +22,7 @@ public:
 private slots:
     void onBackButtonClicked();
     void onRegisterButtonClicked();  // 등록 버튼 클릭 슬롯
+    void onreceiveRegisterResponse();
 
 private:
     Ui::SignupWindow *ui;

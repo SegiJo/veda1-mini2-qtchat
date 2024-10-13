@@ -42,7 +42,7 @@ public:
         centralwidget->setObjectName("centralwidget");
         frame = new QFrame(centralwidget);
         frame->setObjectName("frame");
-        frame->setGeometry(QRect(50, 10, 451, 381));
+        frame->setGeometry(QRect(50, 10, 450, 380));
         frame->setStyleSheet(QString::fromUtf8("Background: rgb(234, 230, 224);\n"
 "border-radius: 5px;"));
         frame->setFrameShape(QFrame::StyledPanel);

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>715</width>
-    <height>490</height>
+    <width>738</width>
+    <height>523</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -20,58 +20,58 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QFrame" name="frame">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>10</y>
-      <width>601</width>
-      <height>461</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">Background: rgb(234, 230, 224);
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QFrame" name="frame">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">Background: rgb(234, 230, 224);
 border-radius: 5px;</string>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <widget class="QLineEdit" name="ChatNameInput">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>20</y>
-       <width>341</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: #FFFFFF;
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLineEdit" name="ChatNameInput">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>401</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #FFFFFF;
 color: rgb(28, 28, 28);
 border: 1.5px solid #535366;
 border-radius: 5px; </string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="FindChatButton">
-     <property name="geometry">
-      <rect>
-       <x>370</x>
-       <y>20</y>
-       <width>60</width>
-       <height>32</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton { 
+       </property>
+      </widget>
+      <widget class="QPushButton" name="FindChatButton">
+       <property name="geometry">
+        <rect>
+         <x>450</x>
+         <y>20</y>
+         <width>60</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
     background-color: #535366; 
     color: white; 
     border-radius: 5px; 
@@ -82,22 +82,22 @@ border-radius: 5px; </string>
   QPushButton:pressed { 
     background-color: #777; 
     }</string>
-     </property>
-     <property name="text">
-      <string>검색</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="JoinChatButton">
-     <property name="geometry">
-      <rect>
-       <x>450</x>
-       <y>20</y>
-       <width>60</width>
-       <height>32</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton { 
+       </property>
+       <property name="text">
+        <string>검색</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="JoinChatButton">
+       <property name="geometry">
+        <rect>
+         <x>530</x>
+         <y>20</y>
+         <width>60</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
     background-color: #535366; 
     color: white; 
     border-radius: 5px; 
@@ -108,22 +108,22 @@ border-radius: 5px; </string>
   QPushButton:pressed { 
     background-color: #777; 
     }</string>
-     </property>
-     <property name="text">
-      <string>참가</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="NewChatButton">
-     <property name="geometry">
-      <rect>
-       <x>520</x>
-       <y>20</y>
-       <width>60</width>
-       <height>32</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton { 
+       </property>
+       <property name="text">
+        <string>참가</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="NewChatButton">
+       <property name="geometry">
+        <rect>
+         <x>610</x>
+         <y>20</y>
+         <width>60</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
     background-color: #535366; 
     color: white; 
     border-radius: 5px; 
@@ -134,38 +134,22 @@ border-radius: 5px; </string>
   QPushButton:pressed { 
     background-color: #777; 
     }</string>
-     </property>
-     <property name="text">
-      <string>생성</string>
-     </property>
-    </widget>
-    <widget class="QListWidget" name="JoinChatListWidget">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>60</y>
-       <width>561</width>
-       <height>341</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: #FFFFFF;
-color: rgb(28, 28, 28);
-border: 1.5px solid #535366;
-border-radius: 5px; </string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="BackButton">
-     <property name="geometry">
-      <rect>
-       <x>480</x>
-       <y>410</y>
-       <width>100</width>
-       <height>32</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton { 
+       </property>
+       <property name="text">
+        <string>생성</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="BackButton">
+       <property name="geometry">
+        <rect>
+         <x>580</x>
+         <y>450</y>
+         <width>100</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
     background-color: #535366; 
     color: white; 
     border-radius: 5px; 
@@ -176,12 +160,48 @@ border-radius: 5px; </string>
   QPushButton:pressed { 
     background-color: #777; 
     }</string>
-     </property>
-     <property name="text">
-      <string>나가기</string>
-     </property>
-    </widget>
-   </widget>
+       </property>
+       <property name="text">
+        <string>나가기</string>
+       </property>
+      </widget>
+      <widget class="QTableView" name="JoinChatListtableView">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>60</y>
+         <width>661</width>
+         <height>381</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QTableView {
+    background-color: rgb(255, 255, 255);  /* 테이블 셀 배경색 */
+    color: rgb(28, 28, 28);                /* 테이블 셀 텍스트 색상 */
+    border: 1.5px solid #535366;
+    border-radius: 5px;
+}
+
+QTableView::item:selected {
+    background-color: #D3D3D3;  /* 선택된 셀의 배경색 */
+    color: black;               /* 선택된 셀의 텍스트 색상 */
+}
+
+QTableView::item {
+    border: 1px solid #535366;  /* 셀 간 테두리 */
+}
+
+QHeaderView::section {
+    background-color: #535366;  /* 헤더 배경색 */
+    color: white;               /* 헤더 텍스트 색상 */
+    border: 1px solid #535366;  /* 헤더 테두리 */
+    font-weight: bold;          /* 헤더 글씨 굵게 */
+}</string>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>

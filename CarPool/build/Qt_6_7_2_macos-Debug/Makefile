@@ -390,6 +390,7 @@ DIST          = ../../../../Downloads/Untitled-design-001.png \
 		../../clickablelabel.h \
 		../../loginwindow.h \
 		../../mainwindow.h \
+		../../serverinfo.h \
 		../../sewindow.h \
 		../../signupwindow.h ../../chatlistwindow.cpp \
 		../../chatroomwindow.cpp \
@@ -1064,7 +1065,7 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../../CarPool_ko_KR.ts $(DISTDIR)/
 	$(COPY_FILE) --parents ../../Logo.qrc qmake_qmake_qm_files.qrc $(DISTDIR)/
-	$(COPY_FILE) --parents ../../chatlistwindow.h ../../chatroomwindow.h ../../clickablelabel.h ../../loginwindow.h ../../mainwindow.h ../../sewindow.h ../../signupwindow.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../../chatlistwindow.h ../../chatroomwindow.h ../../clickablelabel.h ../../loginwindow.h ../../mainwindow.h ../../serverinfo.h ../../sewindow.h ../../signupwindow.h $(DISTDIR)/
 	$(COPY_FILE) --parents ../../chatlistwindow.cpp ../../chatroomwindow.cpp ../../clickablelabel.cpp ../../loginwindow.cpp ../../main.cpp ../../mainwindow.cpp ../../sewindow.cpp ../../signupwindow.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../../chatlistwindow.ui ../../chatroomwindow.ui ../../loginwindow.ui ../../mainwindow.ui ../../sewindow.ui ../../signupwindow.ui $(DISTDIR)/
 	$(COPY_FILE) --parents ../../CarPool_ko_KR.ts $(DISTDIR)/
@@ -1128,6 +1129,12 @@ moc_chatlistwindow.cpp: ../../chatlistwindow.h \
 		../../../../Qt/6.7.2/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
 		../../../../Qt/6.7.2/macos/lib/QtWidgets.framework/Headers/QWidget \
 		../../../../Qt/6.7.2/macos/lib/QtWidgets.framework/Headers/qwidget.h \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/QSqlQueryModel \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/qsqlquerymodel.h \
+		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QItemSelectionModel \
+		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/qitemselectionmodel.h \
 		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QStringList \
 		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/qstringlist.h \
 		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QRegularExpression \
@@ -1185,6 +1192,7 @@ moc_chatlistwindow.cpp: ../../chatlistwindow.h \
 		../../../../Qt/6.7.2/macos/lib/QtNetwork.framework/Headers/qtcpsocket.h \
 		../../../../Qt/6.7.2/macos/lib/QtNetwork.framework/Headers/qtnetworkversion.h \
 		../../../../Qt/6.7.2/macos/lib/QtNetwork.framework/Headers/qudpsocket.h \
+		../../../../Qt/6.7.2/macos/lib/QtNetwork.framework/Headers/QTcpSocket \
 		../../loginwindow.h \
 		../../ClickableLabel.h \
 		../../../../Qt/6.7.2/macos/lib/QtWidgets.framework/Headers/QLabel \
@@ -1249,6 +1257,12 @@ moc_chatroomwindow.cpp: ../../chatroomwindow.h \
 		../../../../Qt/6.7.2/macos/lib/QtNetwork.framework/Headers/qtnetworkversion.h \
 		../../../../Qt/6.7.2/macos/lib/QtNetwork.framework/Headers/qudpsocket.h \
 		../../chatlistwindow.h \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/QSqlQueryModel \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/qsqlquerymodel.h \
+		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QItemSelectionModel \
+		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/qitemselectionmodel.h \
 		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QStringList \
 		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/qstringlist.h \
 		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QRegularExpression \
@@ -1257,6 +1271,7 @@ moc_chatroomwindow.cpp: ../../chatroomwindow.h \
 		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/qdebug.h \
 		../../../../Qt/6.7.2/macos/lib/QtGui.framework/Headers/QMouseEvent \
 		../../../../Qt/6.7.2/macos/lib/QtGui.framework/Headers/qevent.h \
+		../../../../Qt/6.7.2/macos/lib/QtNetwork.framework/Headers/QTcpSocket \
 		../../loginwindow.h \
 		../../ClickableLabel.h \
 		../../../../Qt/6.7.2/macos/lib/QtWidgets.framework/Headers/QLabel \
@@ -1333,7 +1348,14 @@ moc_loginwindow.cpp: ../../loginwindow.h \
 		../../../../Qt/6.7.2/macos/lib/QtGui.framework/Headers/QMouseEvent \
 		../../../../Qt/6.7.2/macos/lib/QtGui.framework/Headers/qevent.h \
 		../../sewindow.h \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../../../../Qt/6.7.2/macos/lib/QtNetwork.framework/Headers/QTcpSocket \
 		../../chatlistwindow.h \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/QSqlQueryModel \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/qsqlquerymodel.h \
+		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QItemSelectionModel \
+		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/qitemselectionmodel.h \
 		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QStringList \
 		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/qstringlist.h \
 		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QRegularExpression \
@@ -1455,6 +1477,9 @@ moc_sewindow.cpp: ../../sewindow.h \
 		../../../../Qt/6.7.2/macos/lib/QtNetwork.framework/Headers/qtcpsocket.h \
 		../../../../Qt/6.7.2/macos/lib/QtNetwork.framework/Headers/qtnetworkversion.h \
 		../../../../Qt/6.7.2/macos/lib/QtNetwork.framework/Headers/qudpsocket.h \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../../../../Qt/6.7.2/macos/lib/QtNetwork.framework/Headers/QTcpSocket \
 		../../ClickableLabel.h \
 		../../../../Qt/6.7.2/macos/lib/QtWidgets.framework/Headers/QLabel \
 		../../../../Qt/6.7.2/macos/lib/QtWidgets.framework/Headers/qlabel.h \
@@ -1578,6 +1603,12 @@ chatlistwindow.o: ../../chatlistwindow.cpp ../../chatlistwindow.h \
 		../../../../Qt/6.7.2/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
 		../../../../Qt/6.7.2/macos/lib/QtWidgets.framework/Headers/QWidget \
 		../../../../Qt/6.7.2/macos/lib/QtWidgets.framework/Headers/qwidget.h \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/QSqlQueryModel \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/qsqlquerymodel.h \
+		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QItemSelectionModel \
+		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/qitemselectionmodel.h \
 		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QStringList \
 		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/qstringlist.h \
 		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QRegularExpression \
@@ -1635,6 +1666,7 @@ chatlistwindow.o: ../../chatlistwindow.cpp ../../chatlistwindow.h \
 		../../../../Qt/6.7.2/macos/lib/QtNetwork.framework/Headers/qtcpsocket.h \
 		../../../../Qt/6.7.2/macos/lib/QtNetwork.framework/Headers/qtnetworkversion.h \
 		../../../../Qt/6.7.2/macos/lib/QtNetwork.framework/Headers/qudpsocket.h \
+		../../../../Qt/6.7.2/macos/lib/QtNetwork.framework/Headers/QTcpSocket \
 		../../loginwindow.h \
 		../../ClickableLabel.h \
 		../../../../Qt/6.7.2/macos/lib/QtWidgets.framework/Headers/QLabel \
@@ -1642,6 +1674,15 @@ chatlistwindow.o: ../../chatlistwindow.cpp ../../chatlistwindow.h \
 		../../sewindow.h \
 		ui_chatlistwindow.h \
 		../../chatroomwindow.h \
+		../../serverinfo.h \
+		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/QSqlQuery \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/qsqlquery.h \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/QSqlError \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/qsqlerror.h \
+		../../../../Qt/6.7.2/macos/lib/QtGui.framework/Headers/QStandardItemModel \
+		../../../../Qt/6.7.2/macos/lib/QtGui.framework/Headers/qstandarditemmodel.h \
 		../../../../Qt/6.7.2/macos/lib/QtGui.framework/Headers/QPainter \
 		../../../../Qt/6.7.2/macos/lib/QtGui.framework/Headers/qpainter.h \
 		../../../../Qt/6.7.2/macos/lib/QtWidgets.framework/Headers/QGraphicsDropShadowEffect \
@@ -1704,6 +1745,12 @@ chatroomwindow.o: ../../chatroomwindow.cpp ../../chatroomwindow.h \
 		../../../../Qt/6.7.2/macos/lib/QtNetwork.framework/Headers/qtnetworkversion.h \
 		../../../../Qt/6.7.2/macos/lib/QtNetwork.framework/Headers/qudpsocket.h \
 		../../chatlistwindow.h \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/QSqlQueryModel \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/qsqlquerymodel.h \
+		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QItemSelectionModel \
+		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/qitemselectionmodel.h \
 		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QStringList \
 		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/qstringlist.h \
 		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QRegularExpression \
@@ -1712,26 +1759,23 @@ chatroomwindow.o: ../../chatroomwindow.cpp ../../chatroomwindow.h \
 		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/qdebug.h \
 		../../../../Qt/6.7.2/macos/lib/QtGui.framework/Headers/QMouseEvent \
 		../../../../Qt/6.7.2/macos/lib/QtGui.framework/Headers/qevent.h \
+		../../../../Qt/6.7.2/macos/lib/QtNetwork.framework/Headers/QTcpSocket \
 		../../loginwindow.h \
 		../../ClickableLabel.h \
 		../../../../Qt/6.7.2/macos/lib/QtWidgets.framework/Headers/QLabel \
 		../../../../Qt/6.7.2/macos/lib/QtWidgets.framework/Headers/qlabel.h \
 		../../sewindow.h \
 		ui_chatroomwindow.h \
+		../../serverinfo.h \
+		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/qstring.h \
 		../../../../Qt/6.7.2/macos/lib/QtGui.framework/Headers/QPainter \
 		../../../../Qt/6.7.2/macos/lib/QtGui.framework/Headers/qpainter.h \
 		../../../../Qt/6.7.2/macos/lib/QtWidgets.framework/Headers/QGraphicsDropShadowEffect \
 		../../../../Qt/6.7.2/macos/lib/QtWidgets.framework/Headers/qgraphicseffect.h \
 		../../../../Qt/6.7.2/macos/lib/QtNetwork.framework/Headers/QHostAddress \
-		../../clientcore.h \
-		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QThread \
-		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/qthread.h \
-		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
-		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
-		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/QSqlQuery \
-		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/qsqlquery.h \
-		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QMap \
-		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/qmap.h
+		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QTextStream \
+		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/qtextstream.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o chatroomwindow.o ../../chatroomwindow.cpp
 
 clickablelabel.o: ../../clickablelabel.cpp ../../clickablelabel.h \
@@ -1801,7 +1845,14 @@ loginwindow.o: ../../loginwindow.cpp ../../loginwindow.h \
 		../../../../Qt/6.7.2/macos/lib/QtGui.framework/Headers/QMouseEvent \
 		../../../../Qt/6.7.2/macos/lib/QtGui.framework/Headers/qevent.h \
 		../../sewindow.h \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../../../../Qt/6.7.2/macos/lib/QtNetwork.framework/Headers/QTcpSocket \
 		../../chatlistwindow.h \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/QSqlQueryModel \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/qsqlquerymodel.h \
+		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QItemSelectionModel \
+		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/qitemselectionmodel.h \
 		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QStringList \
 		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/qstringlist.h \
 		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QRegularExpression \
@@ -1809,16 +1860,20 @@ loginwindow.o: ../../loginwindow.cpp ../../loginwindow.h \
 		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QDebug \
 		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/qdebug.h \
 		ui_loginwindow.h \
-		../../clickablelabel.h \
 		../../mainwindow.h \
 		../../signupwindow.h \
+		../../serverinfo.h \
+		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/qstring.h \
 		../../../../Qt/6.7.2/macos/lib/QtGui.framework/Headers/QPainter \
 		../../../../Qt/6.7.2/macos/lib/QtGui.framework/Headers/qpainter.h \
 		../../../../Qt/6.7.2/macos/lib/QtWidgets.framework/Headers/QGraphicsDropShadowEffect \
 		../../../../Qt/6.7.2/macos/lib/QtWidgets.framework/Headers/qgraphicseffect.h \
 		../../../../Qt/6.7.2/macos/lib/QtNetwork.framework/Headers/QHostAddress \
 		../../../../Qt/6.7.2/macos/lib/QtWidgets.framework/Headers/QDialog \
-		../../../../Qt/6.7.2/macos/lib/QtWidgets.framework/Headers/qdialog.h
+		../../../../Qt/6.7.2/macos/lib/QtWidgets.framework/Headers/qdialog.h \
+		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QCryptographicHash \
+		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/qcryptographichash.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o loginwindow.o ../../loginwindow.cpp
 
 main.o: ../../main.cpp ../../mainwindow.h \
@@ -1945,7 +2000,14 @@ mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		../../../../Qt/6.7.2/macos/lib/QtWidgets.framework/Headers/QLabel \
 		../../../../Qt/6.7.2/macos/lib/QtWidgets.framework/Headers/qlabel.h \
 		../../sewindow.h \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../../../../Qt/6.7.2/macos/lib/QtNetwork.framework/Headers/QTcpSocket \
 		../../chatlistwindow.h \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/QSqlQueryModel \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/qsqlquerymodel.h \
+		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QItemSelectionModel \
+		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/qitemselectionmodel.h \
 		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QStringList \
 		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/qstringlist.h \
 		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QRegularExpression \
@@ -2014,6 +2076,9 @@ sewindow.o: ../../sewindow.cpp ../../sewindow.h \
 		../../../../Qt/6.7.2/macos/lib/QtNetwork.framework/Headers/qtcpsocket.h \
 		../../../../Qt/6.7.2/macos/lib/QtNetwork.framework/Headers/qtnetworkversion.h \
 		../../../../Qt/6.7.2/macos/lib/QtNetwork.framework/Headers/qudpsocket.h \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../../../../Qt/6.7.2/macos/lib/QtNetwork.framework/Headers/QTcpSocket \
 		../../ClickableLabel.h \
 		../../../../Qt/6.7.2/macos/lib/QtWidgets.framework/Headers/QLabel \
 		../../../../Qt/6.7.2/macos/lib/QtWidgets.framework/Headers/qlabel.h \
@@ -2021,6 +2086,10 @@ sewindow.o: ../../sewindow.cpp ../../sewindow.h \
 		../../../../Qt/6.7.2/macos/lib/QtGui.framework/Headers/qevent.h \
 		ui_sewindow.h \
 		../../chatlistwindow.h \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/QSqlQueryModel \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/qsqlquerymodel.h \
+		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QItemSelectionModel \
+		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/qitemselectionmodel.h \
 		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QStringList \
 		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/qstringlist.h \
 		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QRegularExpression \
@@ -2096,7 +2165,14 @@ signupwindow.o: ../../signupwindow.cpp ../../signupwindow.h \
 		ui_signupwindow.h \
 		../../loginwindow.h \
 		../../sewindow.h \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../../../../Qt/6.7.2/macos/lib/QtNetwork.framework/Headers/QTcpSocket \
 		../../chatlistwindow.h \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/QSqlQueryModel \
+		../../../../Qt/6.7.2/macos/lib/QtSql.framework/Headers/qsqlquerymodel.h \
+		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QItemSelectionModel \
+		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/qitemselectionmodel.h \
 		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QStringList \
 		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/qstringlist.h \
 		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QRegularExpression \
@@ -2104,10 +2180,15 @@ signupwindow.o: ../../signupwindow.cpp ../../signupwindow.h \
 		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QDebug \
 		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/qdebug.h \
 		../../mainwindow.h \
+		../../serverinfo.h \
+		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/qstring.h \
 		../../../../Qt/6.7.2/macos/lib/QtGui.framework/Headers/QPainter \
 		../../../../Qt/6.7.2/macos/lib/QtGui.framework/Headers/qpainter.h \
 		../../../../Qt/6.7.2/macos/lib/QtWidgets.framework/Headers/QGraphicsDropShadowEffect \
-		../../../../Qt/6.7.2/macos/lib/QtWidgets.framework/Headers/qgraphicseffect.h
+		../../../../Qt/6.7.2/macos/lib/QtWidgets.framework/Headers/qgraphicseffect.h \
+		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/QCryptographicHash \
+		../../../../Qt/6.7.2/macos/lib/QtCore.framework/Headers/qcryptographichash.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o signupwindow.o ../../signupwindow.cpp
 
 qrc_Logo.o: qrc_Logo.cpp 

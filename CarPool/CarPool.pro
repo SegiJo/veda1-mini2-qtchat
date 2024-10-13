@@ -26,6 +26,7 @@ HEADERS += \
     clickablelabel.h \
     loginwindow.h \
     mainwindow.h \
+    serverinfo.h \
     sewindow.h \
     signupwindow.h
 
