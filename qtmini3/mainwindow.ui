@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>메인 화면</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="styleSheet">
+       <string notr="true">/* 전체 탭 위젯 배경색 */
+QTabWidget::pane {
+   Background: rgb(234, 230, 224);
+    border: 1px solid #535366;   /* SLATE 색상 */
+    border-radius: 5px;
+}
+
+/* 탭 바 스타일 설정 (탭 버튼 영역) */
+QTabBar::tab {
+    background-color: #535366;   /* SLATE 색상 */
+    color: #FFFFFF;              /* WHITE 텍스트 색상 */
+    padding: 5px;
+    border: 1px solid #535366;   /* 테두리 SLATE */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+/* 선택된 탭 스타일 */
+QTabBar::tab:selected {
+    background-color: #535366;   /* CHARCOAL 색상 */
+    color: #FFFFFF;              /* WHITE 텍스트 */
+    font-weight: bold;           /* 선택된 탭 굵은 글씨 */
+}
+
+/* 비활성 탭 스타일 */
+QTabBar::tab:!selected {
+    background-color: #EAe6E0;   /* CANVAS 색상 */
+    color: #535366;              /* SLATE 텍스트 */
+}
+
+/* 탭 바의 간격 조정 */
+QTabBar::tab {
+    margin-right: 2px;
+}
+
+/* 탭 내용의 배경 및 텍스트 색상 */
+QTabWidget::pane &gt; QWidget {
+  Background: rgb(234, 230, 224);  /* WHITE 색상 */
+    color: #1C1C1C;              /* CHARCOAL 텍스트 색상 */
+}
+</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="chatroom_tab">
+       <attribute name="title">
+        <string>채팅방 관리</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,0,0,0,0">
+          <property name="spacing">
+           <number>1</number>
+          </property>
+          <property name="leftMargin">
+           <number>4</number>
+          </property>
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>4</number>
+          </property>
+          <property name="bottomMargin">
+           <number>10</number>
+          </property>
+          <item>
+           <widget class="QLineEdit" name="chatlineEdit">
+            <property name="maximumSize">
+             <size>
+              <width>300</width>
+              <height>300</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: #FFFFFF;
+color: rgb(28, 28, 28);
+border: 1.5px solid #535366;
+border-radius: 5px; </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="searchButton">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>300</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton { 
+    background-color: #535366; 
+    color: white; 
+    border-radius: 5px; 
+    }
+ QPushButton:hover { 
+    background-color: #555; 
+    }
+  QPushButton:pressed { 
+    background-color: #777; 
+    }</string>
+            </property>
+            <property name="text">
+             <string>검색</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="addButton">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>300</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton { 
+    background-color: #535366; 
+    color: white; 
+    border-radius: 5px; 
+    }
+ QPushButton:hover { 
+    background-color: #555; 
+    }
+  QPushButton:pressed { 
+    background-color: #777; 
+    }</string>
+            </property>
+            <property name="text">
+             <string>새 채팅방 추가</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="deleteButton">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>300</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton { 
+    background-color: #535366; 
+    color: white; 
+    border-radius: 5px; 
+    }
+ QPushButton:hover { 
+    background-color: #555; 
+    }
+  QPushButton:pressed { 
+    background-color: #777; 
+    }</string>
+            </property>
+            <property name="text">
+             <string>선택한 채팅방 삭제</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="chatmanageButton">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>300</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton { 
+    background-color: #535366; 
+    color: white; 
+    border-radius: 5px; 
+    }
+ QPushButton:hover { 
+    background-color: #555; 
+    }
+  QPushButton:pressed { 
+    background-color: #777; 
+    }</string>
+            </property>
+            <property name="text">
+             <string>채팅방 메세지 관리</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <widget class="QTableView" name="chatTable">
+          <property name="styleSheet">
+           <string notr="true"> QTableView {
+    background-color: rgb(255, 255, 255);  /* 테이블 셀 배경색 */
+    color: rgb(28, 28, 28);                /* 테이블 셀 텍스트 색상 */
+    border: 1.5px solid #535366;
+    border-radius: 5px;
+}
+
+QTableView::item:selected {
+    background-color: #D3D3D3;  /* 선택된 셀의 배경색 */
+    color: black;               /* 선택된 셀의 텍스트 색상 */
+}
+
+QTableView::item {
+    border: 1px solid #535366;  /* 셀 간 테두리 */
+}
+
+QHeaderView::section {
+    background-color: #535366;  /* 헤더 배경색 */
+    color: white;               /* 헤더 텍스트 색상 */
+    border: 1px solid #535366;  /* 헤더 테두리 */
+    font-weight: bold;          /* 헤더 글씨 굵게 */
+}</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="user_tab">
+       <attribute name="title">
+        <string>사용자 관리</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0" rowspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <property name="leftMargin">
+           <number>4</number>
+          </property>
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>4</number>
+          </property>
+          <property name="bottomMargin">
+           <number>10</number>
+          </property>
+          <item>
+           <widget class="QLineEdit" name="userlineEdit">
+            <property name="maximumSize">
+             <size>
+              <width>450</width>
+              <height>300</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: #FFFFFF;
+color: rgb(28, 28, 28);
+border: 1.5px solid #535366;
+border-radius: 5px; 
+</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="usersearchButton">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>300</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton { 
+    background-color: #535366; 
+    color: white; 
+    border-radius: 5px; 
+    }
+ QPushButton:hover { 
+    background-color: #555; 
+    }
+  QPushButton:pressed { 
+    background-color: #777; 
+    }</string>
+            </property>
+            <property name="text">
+             <string>검색</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="userdeleteButton">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>300</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton { 
+    background-color: #535366; 
+    color: white; 
+    border-radius: 5px; 
+    }
+ QPushButton:hover { 
+    background-color: #555; 
+    }
+  QPushButton:pressed { 
+    background-color: #777; 
+    }</string>
+            </property>
+            <property name="text">
+             <string>선택한 사용자 삭제</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="0">
+         <widget class="QTableView" name="userTable">
+          <property name="styleSheet">
+           <string notr="true">QTableView {
+    background-color: rgb(255, 255, 255);  /* 테이블 셀 배경색 */
+    color: rgb(28, 28, 28);                /* 테이블 셀 텍스트 색상 */
+    border: 1.5px solid #535366;
+    border-radius: 5px;
+}
+
+QTableView::item:selected {
+    background-color: #D3D3D3;  /* 선택된 셀의 배경색 */
+    color: black;               /* 선택된 셀의 텍스트 색상 */
+}
+
+QTableView::item {
+    border: 1px solid #535366;  /* 셀 간 테두리 */
+}
+
+QHeaderView::section {
+    background-color: #535366;  /* 헤더 배경색 */
+    color: white;               /* 헤더 텍스트 색상 */
+    border: 1px solid #535366;  /* 헤더 테두리 */
+    font-weight: bold;          /* 헤더 글씨 굵게 */
+}</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
