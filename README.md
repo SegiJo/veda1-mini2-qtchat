@@ -1,31 +1,30 @@
-# ❤ VEDA-Gotogether
+# 🚘 VEDA-Gotogether
 >  Qt를 이용한 카풀 채팅 서버-클라이언트 시스템
 
 <br>
 
-![기능 소개 페이지](![logo](https://github.com/user-attachments/assets/2048eb83-61c3-4233-861b-b9d4334ee456))
-
+![logo_mo](https://github.com/user-attachments/assets/14f90d95-4a6a-4cae-9d39-384d7baf9be0)
 
 </br>
 
-#### 📝고객의 정보를 입력받고 서비스를 등록합니다!
-- 고객의 인적 사항을 입력받고 변동 사항이 생길 경우 수정 및 삭제합니다.
-- 등록된 고객 정보를 기반으로 운동, 식단 정보들을 입력, 관리합니다.
-- 이와 같은 기능들을 바탕으로 관리자에게 서비스를 제공합니다.
+#### 🚩 카풀 기사와 승객에게 서비스를 제공합니다!
+- 회원 가입 후 로그인을 통해 채팅 서비스를 이용할 수 있습니다.
+- 채팅방 생성 시, 출발지와 목적지를 설정할 수 있습니다.
+- 사용자에게 채팅, 이모티콘, 경로 이미지 전송 등 서비스를 제공합니다.
 
 <br>
 
 ## 👋 팀원 구성
-| 김태원 | 김시현 | 조세기 |
-| :------: |  :------: | :------: |
-|![태원](https://github.com/user-attachments/assets/1953ee28-d0ce-41b9-89b1-8f6242a8e751)|![시현](https://github.com/user-attachments/assets/0da48503-c984-4c63-a9de-64d1fa063e60)|![segi](https://github.com/user-attachments/assets/25bf3446-33d7-419b-8429-71af6514fe9e)|
+| 김정은 | 조세기 |
+| :------: | :------: |
+|![정은](https://github.com/user-attachments/assets/0c1715a0-e7f3-43ec-bf99-0cafb9581c09)|![segi](https://github.com/user-attachments/assets/25bf3446-33d7-419b-8429-71af6514fe9e)|
 
 <br>
 
 ## 🛠 개발 환경
-| 개발 툴 | 개발 언어 | 형상 관리 | 협업 툴 |
-| :------: |  :------: | :------: | :------: |
-|![vscode](https://github.com/user-attachments/assets/17fdb173-1182-4a2a-9cd6-f6b5f53f0b5f)|![ISO_C++_Logo svg](https://github.com/user-attachments/assets/83b78f77-19d4-4281-b47a-13cee607b608)|![git](https://github.com/user-attachments/assets/af0fdafa-e05b-48aa-8a0a-3e255382a6ae)|![Notion-logo svg](https://github.com/user-attachments/assets/309cab68-8907-41a6-88e6-815edc9e8e43)|
+| 개발 툴 | 개발 언어 | DB | 형상 관리 | 협업 툴 |
+| :------: |  :------: | :------: | :------: | :------: |
+|![qtlogo](https://github.com/user-attachments/assets/65a08303-4c70-4bf5-b879-545b398d4f16)|![ISO_C++_Logo svg](https://github.com/user-attachments/assets/83b78f77-19d4-4281-b47a-13cee607b608)|![Sqlite-square-icon](https://github.com/user-attachments/assets/4c5a345a-fd0c-4beb-a4ee-3c30a92c1282)|![git](https://github.com/user-attachments/assets/af0fdafa-e05b-48aa-8a0a-3e255382a6ae)|![Notion-logo svg](https://github.com/user-attachments/assets/309cab68-8907-41a6-88e6-815edc9e8e43)|
 
 
 <br>
